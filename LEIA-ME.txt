@@ -1,0 +1,15 @@
+PISTA BRASIL — pacote inicial de aplicativo web (PWA)
+
+IMPORTANTE:
+- O Blogger não permite hospedar o service-worker.js na raiz do domínio do Blogger.
+- Para que o Chrome ofereça a instalação como aplicativo, publique estes arquivos em uma hospedagem HTTPS que permita service worker, por exemplo GitHub Pages.
+- Este ZIP ainda não está publicado; primeiro é preciso enviar os arquivos para GitHub Pages.
+- O ícone incluído é um modelo provisório com o nome PISTA BRASIL. Pode ser substituído pela logo oficial.
+- O áudio toca pelo streaming: https://stream3.svrdedicado.org:8266/stream
+
+Arquivos:
+index.html
+manifest.json
+service-worker.js
+icons/icon-192.png
+icons/icon-512.png
