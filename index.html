@@ -4,42 +4,83 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#06111d">
-<meta name="description" content="PISTA BRASIL — A FESTA É SUA! Ouça ao vivo.">
+<meta name="description" content="PISTA BRASIL — A FESTA É SUA! Ouça sua web rádio ao vivo.">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
 <title>PISTA BRASIL — A FESTA É SUA!</title>
 <style>
+:root{--green:#14ed56;--yellow:#ffe600;--blue:#087bff;--dark:#04101f}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px;background:#eef2f5;font-family:Arial,sans-serif;color:white}
-.app{width:100%;max-width:460px;background:#06111d;border:2px solid #12c95a;border-radius:26px;text-align:center;padding:24px 18px;box-shadow:0 12px 35px #0002}
-.logo{display:block;width:100%;max-width:340px;height:auto;max-height:250px;object-fit:contain;margin:0 auto 16px;background:#fff;border-radius:16px}
-h1{font-size:29px;color:#ffe600;margin:10px 0 7px;font-weight:900;letter-spacing:.5px}
-.tag{color:#12c95a;font-size:21px;font-weight:900;letter-spacing:1px;margin:0 0 24px}
-.play{border:0;border-radius:50px;padding:16px 22px;background:#12c95a;color:#06111d;font-size:18px;font-weight:bold;cursor:pointer;width:100%}
-.status{min-height:22px;margin:18px 0;color:white}
-.site{display:inline-block;margin-top:12px;color:#ffe600;text-decoration:none;font-weight:bold}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#063e79 0,#06111d 55%,#020812 100%);color:#fff;font-family:Arial,Helvetica,sans-serif;padding:18px 12px 28px}
+.app{max-width:480px;margin:0 auto;border:1px solid #0b8cff;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#061a32,#020812 70%);box-shadow:0 0 25px #0077ff66,0 0 48px #00ff6630}
+.topline{height:6px;background:linear-gradient(90deg,#006bff,#14ed56,#ffe600,#006bff)}
+.brand{padding:24px 22px 18px;text-align:center;background:radial-gradient(ellipse at top,#0a3670,#06111d 72%)}
+.logo{width:100%;max-width:330px;height:170px;object-fit:contain;background:#fff;border-radius:16px;padding:8px;box-shadow:0 0 20px #00aaff55}
+h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spacing:1px;color:#fff;text-shadow:0 0 10px #00aaff}
+.tag{margin:0;color:var(--yellow);font-size:clamp(20px,5vw,27px);font-weight:1000;font-style:italic;text-shadow:0 2px 0 #a35d00}
+.eq{height:62px;display:flex;align-items:end;justify-content:center;gap:5px;margin:22px auto 12px}
+.eq span{width:8px;border-radius:6px 6px 0 0;background:linear-gradient(0deg,#087bff,#14ed56,#ffe600);height:15px;opacity:.9}
+.eq span:nth-child(3n){height:42px}.eq span:nth-child(4n){height:56px}.eq span:nth-child(2n){height:28px}
+.playarea{padding:0 22px 22px;text-align:center}
+.play{width:100%;border:2px solid #b7ffce;border-radius:60px;padding:17px 15px;background:linear-gradient(#21ff65,#00a83c);color:#03170a;font-size:19px;font-weight:1000;box-shadow:0 0 18px #00ff6677;cursor:pointer}
+.status{min-height:22px;margin:15px 0 8px;color:#d8edff;font-size:14px}
+.volrow{display:flex;align-items:center;gap:10px;justify-content:center;margin:10px auto 20px;color:#bde2ff}
+.volrow input{width:62%;accent-color:#078bff}
+.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}
+.action{display:block;text-decoration:none;border:1px solid #168bff;border-radius:14px;padding:12px 5px;color:#fff;font-size:12px;font-weight:bold;background:#071d36}
+.action b{display:block;font-size:23px;margin-bottom:5px}
+.install{display:block;width:100%;margin:14px 0 0;border:2px solid #fff;border-radius:18px;padding:16px 10px;background:linear-gradient(100deg,#10b83e,#24ff63);color:#001b08;font-size:18px;font-weight:1000;box-shadow:0 0 20px #0f5}
+.footer{border-top:1px solid #124d83;padding:15px;text-align:center;color:#b9d8f5;font-size:12px}
+.smallsite{color:var(--yellow);text-decoration:none;font-weight:bold}
+@media(max-width:360px){.brand{padding:18px 14px}.logo{height:140px}.playarea{padding:0 14px 18px}.action{font-size:10px}}
 </style>
 </head>
 <body>
 <main class="app">
+<div class="topline"></div>
+<section class="brand">
   <img class="logo" src="icons/icon-512.png" alt="Logo oficial PISTA BRASIL">
   <h1>PISTA BRASIL</h1>
   <p class="tag">A FESTA É SUA!</p>
+  <div class="eq" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+</section>
+<section class="playarea">
   <audio id="radio" preload="none" src="https://stream3.svrdedicado.org:8266/stream"></audio>
-  <button class="play" id="toggle">▶ OUVIR RÁDIO</button>
-  <p class="status" id="status">Clique para ouvir ao vivo</p>
-  <a class="site" href="https://www.pistabrasil.com.br/">VISITAR NOSSO SITE</a>
+  <button id="toggle" class="play">▶ OUVIR RÁDIO AO VIVO</button>
+  <p id="status" class="status">Clique para ouvir a PISTA BRASIL</p>
+  <div class="volrow"><span>🔊</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume"><span>♫</span></div>
+  <button id="install" class="install" hidden>⬇ INSTALAR APLICATIVO</button>
+  <div class="actions">
+    <a class="action" href="https://wa.me/" target="_blank" rel="noopener"><b>☏</b>WHATSAPP</a>
+    <a class="action" href="https://www.facebook.com/" target="_blank" rel="noopener"><b>f</b>FACEBOOK</a>
+    <a class="action" href="https://www.pistabrasil.com.br/" target="_blank" rel="noopener"><b>🌐</b>SITE OFICIAL</a>
+  </div>
+  <a class="smallsite" href="https://www.pistabrasil.com.br/">www.pistabrasil.com.br</a>
+</section>
+<div class="footer">PISTA BRASIL • A SUA WEB RÁDIO • A FESTA É SUA!</div>
 </main>
 <script>
 const audio=document.getElementById('radio'), btn=document.getElementById('toggle'), status=document.getElementById('status');
-btn.addEventListener('click', async ()=>{
+const installBtn=document.getElementById('install');
+audio.volume=0.8;
+document.getElementById('volume').addEventListener('input',e=>audio.volume=Number(e.target.value));
+btn.addEventListener('click',async()=>{
  if(!audio.paused){audio.pause();return;}
  status.textContent='Conectando à rádio...';
  try{await audio.play();}catch(e){status.textContent='Não foi possível conectar. Verifique a internet e tente novamente.';}
 });
 audio.addEventListener('playing',()=>{btn.textContent='Ⅱ PAUSAR RÁDIO';status.textContent='Você está ouvindo a PISTA BRASIL!';});
-audio.addEventListener('pause',()=>{btn.textContent='▶ OUVIR RÁDIO';status.textContent='Rádio pausada';});
+audio.addEventListener('pause',()=>{btn.textContent='▶ OUVIR RÁDIO AO VIVO';status.textContent='Rádio pausada';});
 audio.addEventListener('error',()=>{status.textContent='Erro ao conectar ao streaming. Tente novamente mais tarde.';});
+let installPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBtn.hidden=false;});
+installBtn.addEventListener('click',async()=>{
+ if(installPrompt){installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;installBtn.hidden=true;}
+ else{status.textContent='No Chrome, abra ⋮ e escolha “Instalar app” ou “Adicionar à tela inicial”.';}
+});
+window.addEventListener('appinstalled',()=>{installBtn.hidden=true;status.textContent='PISTA BRASIL instalada com sucesso!';});
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));}
 </script>
 </body>

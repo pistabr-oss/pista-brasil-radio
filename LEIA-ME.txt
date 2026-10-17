@@ -1,6 +1,1 @@
-PISTA BRASIL — página atualizada
-Alterações: logo maior na página e slogan “A FESTA É SUA!”
-Envie/substitua index.html, manifest.json, service-worker.js e a pasta icons no repositório GitHub.
-Depois de Commit changes, aguarde o GitHub Pages publicar.
-Para atualizar ícone instalado, pode ser necessário desinstalar e instalar novamente.
-Streaming mantido: https://stream3.svrdedicado.org:8266/stream
+Aplicativo PISTA BRASIL com visual inspirado no banner. Substitua index.html, manifest.json, service-worker.js e a pasta icons no repositório GitHub Pages; faça Commit changes e aguarde publicação. O streaming permanece o mesmo.
