@@ -1,9 +1,12 @@
-PISTA BRASIL — ATUALIZAÇÃO DO APLICATIVO
+PISTA BRASIL — LOGO MAIOR E WHATSAPP CORRIGIDO
 
-Esta pasta contém os arquivos do aplicativo e a pasta icons.
-1. No GitHub, abra o repositório pista-brasil-radio.
-2. Envie/substitua index.html, manifest.json e service-worker.js.
-3. Envie também a pasta icons com icon-192.png e icon-512.png.
-4. Faça Commit changes e aguarde alguns minutos.
-O service worker foi atualizado para cache v6.
-O WhatsApp permanece configurado para https://wa.me/5565981319466.
+Alterações:
+- Logo do cabeçalho maior (até 420px de largura e 220px de altura, sem distorção).
+- Link do WhatsApp configurado para https://api.whatsapp.com/send?phone=5565981319466.
+- Cache do service worker atualizado para v7.
+
+Publicação:
+1. Substitua index.html e service-worker.js no GitHub.
+2. Faça Commit changes e aguarde a publicação.
+3. Abra o app e atualize a página. Se continuar igual, feche e abra novamente.
+Obs.: os arquivos manifest.json e icons não precisam ser alterados para estas duas mudanças.

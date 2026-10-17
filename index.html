@@ -15,7 +15,7 @@ body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#063e79
 .app{max-width:480px;margin:0 auto;border:1px solid #0b8cff;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#061a32,#020812 70%);box-shadow:0 0 25px #0077ff66,0 0 48px #00ff6630}
 .topline{height:6px;background:linear-gradient(90deg,#006bff,#14ed56,#ffe600,#006bff)}
 .brand{padding:24px 22px 18px;text-align:center;background:radial-gradient(ellipse at top,#0a3670,#06111d 72%)}
-.logo{width:100%;max-width:330px;height:170px;object-fit:contain;background:#fff;border-radius:16px;padding:8px;box-shadow:0 0 20px #00aaff55}
+.logo{display:block;width:100%;max-width:420px;height:220px;object-fit:contain;background:#fff;border-radius:16px;padding:4px;margin:0 auto;box-shadow:0 0 20px #00aaff55}
 h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spacing:1px;color:#fff;text-shadow:0 0 10px #00aaff}
 .tag{margin:0;color:var(--yellow);font-size:clamp(20px,5vw,27px);font-weight:1000;font-style:italic;text-shadow:0 2px 0 #a35d00}
 .eq{height:62px;display:flex;align-items:end;justify-content:center;gap:5px;margin:22px auto 12px}
@@ -32,7 +32,7 @@ h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spac
 .install{display:block;width:100%;margin:14px 0 0;border:2px solid #fff;border-radius:18px;padding:16px 10px;background:linear-gradient(100deg,#10b83e,#24ff63);color:#001b08;font-size:18px;font-weight:1000;box-shadow:0 0 20px #0f5}
 .footer{border-top:1px solid #124d83;padding:15px;text-align:center;color:#b9d8f5;font-size:12px}
 .smallsite{color:var(--yellow);text-decoration:none;font-weight:bold}
-@media(max-width:360px){.brand{padding:18px 14px}.logo{height:140px}.playarea{padding:0 14px 18px}.action{font-size:10px}}
+@media(max-width:360px){.brand{padding:18px 14px}.logo{height:175px;max-width:100%}.playarea{padding:0 14px 18px}.action{font-size:10px}}
 </style>
 </head>
 <body>
@@ -53,7 +53,7 @@ h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spac
   <div class="volrow"><span>🔊</span><input id="volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume"><span>♫</span></div>
   <button id="install" class="install" hidden>⬇ INSTALAR APLICATIVO</button>
   <div class="actions">
-    <a class="action" href="https://wa.me/5565981319466" target="_blank" rel="noopener"><b>☏</b>FALAR NO WHATSAPP</a>
+    <a class="action" href="https://api.whatsapp.com/send?phone=5565981319466" target="_blank" rel="noopener noreferrer"><b>☏</b>FALAR NO WHATSAPP</a>
     <a class="action" href="https://www.facebook.com/" target="_blank" rel="noopener"><b>f</b>FACEBOOK</a>
     <a class="action" href="https://www.pistabrasil.com.br/" target="_blank" rel="noopener"><b>🌐</b>SITE OFICIAL</a>
   </div>
