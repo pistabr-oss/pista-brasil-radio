@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "PISTA BRASIL — A sua web rádio",
+  "name": "PISTA BRASIL — A FESTA É SUA!",
   "short_name": "PISTA BRASIL",
-  "description": "Ouça a rádio PISTA BRASIL ao vivo.",
+  "description": "PISTA BRASIL — A FESTA É SUA! Ouça ao vivo.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,6 +1,6 @@
-PISTA BRASIL — versão com a logo oficial
-
-Envie estes arquivos para o repositório GitHub existente, substituindo os arquivos correspondentes.
-Envie index.html, manifest.json, service-worker.js e a pasta icons com icon-192.png e icon-512.png.
-Depois de salvar (Commit changes), aguarde a publicação e atualize o aplicativo no celular.
-O streaming permanece: https://stream3.svrdedicado.org:8266/stream
+PISTA BRASIL — página atualizada
+Alterações: logo maior na página e slogan “A FESTA É SUA!”
+Envie/substitua index.html, manifest.json, service-worker.js e a pasta icons no repositório GitHub.
+Depois de Commit changes, aguarde o GitHub Pages publicar.
+Para atualizar ícone instalado, pode ser necessário desinstalar e instalar novamente.
+Streaming mantido: https://stream3.svrdedicado.org:8266/stream
