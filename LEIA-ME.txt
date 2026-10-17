@@ -1,1 +1,9 @@
-Aplicativo PISTA BRASIL com visual inspirado no banner. Substitua index.html, manifest.json, service-worker.js e a pasta icons no repositório GitHub Pages; faça Commit changes e aguarde publicação. O streaming permanece o mesmo.
+PISTA BRASIL — ATUALIZAÇÃO DO APLICATIVO
+
+Esta pasta contém os arquivos do aplicativo e a pasta icons.
+1. No GitHub, abra o repositório pista-brasil-radio.
+2. Envie/substitua index.html, manifest.json e service-worker.js.
+3. Envie também a pasta icons com icon-192.png e icon-512.png.
+4. Faça Commit changes e aguarde alguns minutos.
+O service worker foi atualizado para cache v6.
+O WhatsApp permanece configurado para https://wa.me/5565981319466.
