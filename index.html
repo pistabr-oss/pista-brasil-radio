@@ -11,19 +11,18 @@
 <style>
 *{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:#eef2f5;font-family:Arial,sans-serif;color:white}
 .app{width:100%;max-width:420px;background:#06111d;border:2px solid #12c95a;border-radius:26px;text-align:center;padding:26px 20px;box-shadow:0 12px 35px #0002}
-.logo{width:180px;max-width:70%;height:auto;border-radius:18px}h1{font-size:25px;color:#ffe600;margin:18px 0 5px}.tag{color:#12c95a;margin:0 0 24px}.play{border:0;border-radius:50px;padding:16px 22px;background:#12c95a;color:#06111d;font-size:18px;font-weight:bold;cursor:pointer;width:100%}.status{min-height:22px;margin:18px 0;color:white}.site{display:inline-block;margin-top:12px;color:#ffe600;text-decoration:none;font-weight:bold}.hint{font-size:13px;color:#cbd5e1;line-height:1.5;margin-top:22px}
+.logo{width:220px;max-width:82%;height:150px;object-fit:contain;background:#fff;border-radius:14px}h1{font-size:25px;color:#ffe600;margin:18px 0 5px}.tag{color:#12c95a;margin:0 0 24px}.play{border:0;border-radius:50px;padding:16px 22px;background:#12c95a;color:#06111d;font-size:18px;font-weight:bold;cursor:pointer;width:100%}.status{min-height:22px;margin:18px 0;color:white}.site{display:inline-block;margin-top:12px;color:#ffe600;text-decoration:none;font-weight:bold}.hint{font-size:13px;color:#cbd5e1;line-height:1.5;margin-top:22px}
 </style>
 </head>
 <body>
 <main class="app">
-  <img class="logo" src="icons/icon-512.png" alt="PISTA BRASIL">
+  <img class="logo" src="icons/icon-512.png" alt="Logo oficial PISTA BRASIL">
   <h1>PISTA BRASIL</h1>
   <p class="tag">A SUA WEB RÁDIO</p>
   <audio id="radio" preload="none" src="https://stream3.svrdedicado.org:8266/stream"></audio>
   <button class="play" id="toggle">▶ OUVIR RÁDIO</button>
   <p class="status" id="status">Clique para ouvir ao vivo</p>
   <a class="site" href="https://www.pistabrasil.com.br/">VISITAR NOSSO SITE</a>
-  <p class="hint">Para instalar: abra esta página no Chrome do Android, toque em ⋮ e escolha “Instalar app” ou “Adicionar à tela inicial”.</p>
 </main>
 <script>
 const audio=document.getElementById('radio'), btn=document.getElementById('toggle'), status=document.getElementById('status');
