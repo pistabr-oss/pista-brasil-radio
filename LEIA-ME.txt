@@ -1,15 +1,7 @@
-PISTA BRASIL — APP COM DATA E MENSAGEM DO DIA
+CORREÇÃO DA DATA E MENSAGEM DO DIA — PISTA BRASIL
 
-Novidades:
-- Mostra automaticamente o dia da semana e a data completa.
-- Exibe uma mensagem positiva com tema de música e alegria, alternada diariamente.
-- Mantém o player, o botão de instalação, a logo e o WhatsApp configurado.
-
-Como publicar:
-1. Extraia este ZIP.
-2. No GitHub, abra https://github.com/pistabr-oss/pista-brasil-radio
-3. Substitua index.html e service-worker.js.
-4. Mantenha/substitua também manifest.json e a pasta icons se solicitado; este ZIP contém a estrutura completa.
-5. Clique em Commit changes e aguarde alguns minutos.
-Endereço do app: https://pistabr-oss.github.io/pista-brasil-radio/
-WhatsApp: https://wa.me/5565981319466
+Substitua index.html e service-worker.js no repositório GitHub.
+Mantenha manifest.json e a pasta icons existentes, a menos que queira atualizá-los também.
+Depois clique em Commit changes e aguarde alguns minutos.
+Abra https://pistabr-oss.github.io/pista-brasil-radio/ e atualize a página.
+Se o app instalado ainda não mostrar a mensagem, feche-o completamente e abra novamente. Se necessário, teste primeiro o endereço no Chrome.
