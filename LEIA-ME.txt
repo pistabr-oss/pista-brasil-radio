@@ -1,12 +1,15 @@
-PISTA BRASIL — LOGO MAIOR E WHATSAPP CORRIGIDO
+PISTA BRASIL — APP COM DATA E MENSAGEM DO DIA
 
-Alterações:
-- Logo do cabeçalho maior (até 420px de largura e 220px de altura, sem distorção).
-- Link do WhatsApp configurado para https://api.whatsapp.com/send?phone=5565981319466.
-- Cache do service worker atualizado para v7.
+Novidades:
+- Mostra automaticamente o dia da semana e a data completa.
+- Exibe uma mensagem positiva com tema de música e alegria, alternada diariamente.
+- Mantém o player, o botão de instalação, a logo e o WhatsApp configurado.
 
-Publicação:
-1. Substitua index.html e service-worker.js no GitHub.
-2. Faça Commit changes e aguarde a publicação.
-3. Abra o app e atualize a página. Se continuar igual, feche e abra novamente.
-Obs.: os arquivos manifest.json e icons não precisam ser alterados para estas duas mudanças.
+Como publicar:
+1. Extraia este ZIP.
+2. No GitHub, abra https://github.com/pistabr-oss/pista-brasil-radio
+3. Substitua index.html e service-worker.js.
+4. Mantenha/substitua também manifest.json e a pasta icons se solicitado; este ZIP contém a estrutura completa.
+5. Clique em Commit changes e aguarde alguns minutos.
+Endereço do app: https://pistabr-oss.github.io/pista-brasil-radio/
+WhatsApp: https://wa.me/5565981319466
