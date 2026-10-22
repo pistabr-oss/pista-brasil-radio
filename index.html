@@ -21,9 +21,6 @@ h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spac
 .daybox{margin:16px auto 0;padding:12px 10px;max-width:420px;border:1px solid #168bff;border-radius:16px;background:linear-gradient(135deg,#071d36,#092b47);box-shadow:0 0 16px #0077ff33}
 .dayname{margin:0;color:var(--yellow);font-weight:900;font-size:14px;letter-spacing:1.5px;text-transform:uppercase}
 .daydate{margin:5px 0 0;color:#fff;font-size:clamp(17px,4.5vw,22px);font-weight:900}
-.daymessage{margin:12px auto 0;padding:12px 14px;max-width:420px;border-left:4px solid var(--green);border-radius:10px;background:#041a2c;color:#eaf6ff;font-size:14px;line-height:1.5}
-.daymessage strong{display:block;color:var(--green);font-size:12px;letter-spacing:1px;margin-bottom:4px}
-
 .eq{height:62px;display:flex;align-items:end;justify-content:center;gap:5px;margin:22px auto 12px}
 .eq span{width:8px;border-radius:6px 6px 0 0;background:linear-gradient(0deg,#087bff,#14ed56,#ffe600);height:15px;opacity:.9}
 .eq span:nth-child(3n){height:42px}.eq span:nth-child(4n){height:56px}.eq span:nth-child(2n){height:28px}
@@ -49,7 +46,6 @@ h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spac
   <h1>PISTA BRASIL</h1>
   <p class="tag">A FESTA É SUA!</p>
   <div class="daybox" aria-live="polite"><p id="dayname" class="dayname">HOJE</p><p id="daydate" class="daydate">Carregando data...</p></div>
-  <div class="daymessage"><strong>✨ MENSAGEM DO DIA</strong><span id="dailyMessage">Aumente o som, espalhe alegria e faça deste dia uma grande festa!</span></div>
   <div class="eq" aria-hidden="true">
     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
@@ -71,27 +67,12 @@ h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spac
 </main>
 <script>
 const dayNameEl=document.getElementById('dayname'), dayDateEl=document.getElementById('daydate');
-const dailyMessageEl=document.getElementById('dailyMessage');
-const dailyMessages=[
- 'Aumente o som, espalhe alegria e faça deste dia uma grande festa!',
- 'Que a música deixe seu dia mais leve e feliz!',
- 'Neste dia! Que não faltem saúde, alegria e muita música.',
-  'Antigamente a gente ouviu: Essa é lançamento! agora já é flash back.',
-'Só uma música boa, faz você recordar, um lugar e pessoas do passado.',
- 'A vida fica melhor com música boa e gente querida por perto.',
- 'Hoje é dia de sorrir, cantar junto e curtir a PISTA BRASIL!',
- 'Que a sua jornada seja cheia de boas notícias e grandes canções.',
- 'Aperte o play: a trilha sonora da sua alegria está aqui!'
-];
 function updateDayAndMessage(){
  const now=new Date();
  const weekdays=['DOMINGO','SEGUNDA-FEIRA','TERÇA-FEIRA','QUARTA-FEIRA','QUINTA-FEIRA','SEXTA-FEIRA','SÁBADO'];
  const months=['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
  dayNameEl.textContent=weekdays[now.getDay()];
  dayDateEl.textContent=now.getDate()+' DE '+months[now.getMonth()]+' DE '+now.getFullYear();
- const start=new Date(now.getFullYear(),0,0);
- const dayOfYear=Math.floor((now-start)/86400000);
- dailyMessageEl.textContent=dailyMessages[dayOfYear % dailyMessages.length];
 }
 updateDayAndMessage();
 const audio=document.getElementById('radio'), btn=document.getElementById('toggle'), status=document.getElementById('status');
