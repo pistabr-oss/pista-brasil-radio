@@ -1,7 +1,10 @@
-CORREÇÃO DA DATA E MENSAGEM DO DIA — PISTA BRASIL
+PISTA BRASIL — VERSÃO SEM MENSAGEM DO DIA
 
-Substitua index.html e service-worker.js no repositório GitHub.
-Mantenha manifest.json e a pasta icons existentes, a menos que queira atualizá-los também.
-Depois clique em Commit changes e aguarde alguns minutos.
-Abra https://pistabr-oss.github.io/pista-brasil-radio/ e atualize a página.
-Se o app instalado ainda não mostrar a mensagem, feche-o completamente e abra novamente. Se necessário, teste primeiro o endereço no Chrome.
+Esta versão remove a mensagem do dia e mantém apenas a data e o dia da semana.
+
+Para publicar:
+1. Extraia este ZIP.
+2. No GitHub, abra https://github.com/pistabr-oss/pista-brasil-radio
+3. Substitua index.html e service-worker.js.
+4. Clique em Commit changes e aguarde alguns minutos.
+5. Abra o app no navegador e atualize a página. Feche e abra novamente o app instalado, se necessário.
