@@ -24,6 +24,12 @@ h1{margin:17px 0 4px;font-size:clamp(26px,7vw,36px);font-weight:1000;letter-spac
 .eq{height:62px;display:flex;align-items:end;justify-content:center;gap:5px;margin:22px auto 12px}
 .eq span{width:8px;border-radius:6px 6px 0 0;background:linear-gradient(0deg,#087bff,#14ed56,#ffe600);height:15px;opacity:.9}
 .eq span:nth-child(3n){height:42px}.eq span:nth-child(4n){height:56px}.eq span:nth-child(2n){height:28px}
+.eq.playing span{animation:wave .72s ease-in-out infinite alternate;transform-origin:bottom}
+.eq.playing span:nth-child(2n){animation-duration:.48s}
+.eq.playing span:nth-child(3n){animation-duration:.9s}
+.eq.playing span:nth-child(4n){animation-delay:-.35s}
+@keyframes wave{0%{transform:scaleY(.25);opacity:.65}100%{transform:scaleY(1.15);opacity:1}}
+@media(prefers-reduced-motion:reduce){.eq.playing span{animation-duration:1.8s}}
 .playarea{padding:0 22px 22px;text-align:center}
 .play{width:100%;border:2px solid #b7ffce;border-radius:60px;padding:17px 15px;background:linear-gradient(#21ff65,#00a83c);color:#03170a;font-size:19px;font-weight:1000;box-shadow:0 0 18px #00ff6677;cursor:pointer}
 .status{min-height:22px;margin:15px 0 8px;color:#d8edff;font-size:14px}
@@ -75,7 +81,7 @@ function updateDayAndMessage(){
  dayDateEl.textContent=now.getDate()+' DE '+months[now.getMonth()]+' DE '+now.getFullYear();
 }
 updateDayAndMessage();
-const audio=document.getElementById('radio'), btn=document.getElementById('toggle'), status=document.getElementById('status');
+const audio=document.getElementById('radio'), btn=document.getElementById('toggle'), status=document.getElementById('status'), eq=document.querySelector('.eq');
 const installBtn=document.getElementById('install');
 audio.volume=0.8;
 document.getElementById('volume').addEventListener('input',e=>audio.volume=Number(e.target.value));
@@ -84,8 +90,8 @@ btn.addEventListener('click',async()=>{
  status.textContent='Conectando à rádio...';
  try{await audio.play();}catch(e){status.textContent='Não foi possível conectar. Verifique a internet e tente novamente.';}
 });
-audio.addEventListener('playing',()=>{btn.textContent='Ⅱ PAUSAR RÁDIO';status.textContent='Você está ouvindo a PISTA BRASIL!';});
-audio.addEventListener('pause',()=>{btn.textContent='▶ OUVIR RÁDIO AO VIVO';status.textContent='Rádio pausada';});
+audio.addEventListener('playing',()=>{btn.textContent='Ⅱ PAUSAR RÁDIO';status.textContent='Você está ouvindo a PISTA BRASIL!';eq.classList.add('playing');});
+audio.addEventListener('pause',()=>{btn.textContent='▶ OUVIR RÁDIO AO VIVO';status.textContent='Rádio pausada';eq.classList.remove('playing');});
 audio.addEventListener('error',()=>{status.textContent='Erro ao conectar ao streaming. Tente novamente mais tarde.';});
 let installPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;installBtn.hidden=false;});
