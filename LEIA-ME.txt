@@ -1,10 +1,9 @@
-PISTA BRASIL — VERSÃO SEM MENSAGEM DO DIA
+PISTA BRASIL — FUNDO COM BANDEIRA DO BRASIL
 
-Esta versão remove a mensagem do dia e mantém apenas a data e o dia da semana.
+Esta versão mantém a data e o player, remove a mensagem longa e adiciona um fundo discreto inspirado na bandeira do Brasil.
 
-Para publicar:
-1. Extraia este ZIP.
-2. No GitHub, abra https://github.com/pistabr-oss/pista-brasil-radio
-3. Substitua index.html e service-worker.js.
-4. Clique em Commit changes e aguarde alguns minutos.
-5. Abra o app no navegador e atualize a página. Feche e abra novamente o app instalado, se necessário.
+1. Faça backup da versão atual.
+2. Extraia este ZIP.
+3. No repositório https://github.com/pistabr-oss/pista-brasil-radio, substitua index.html e service-worker.js.
+4. Envie também icons/fundo-bandeira-brasil.jpg para dentro da pasta icons no GitHub.
+5. Clique em Commit changes e aguarde alguns minutos.
